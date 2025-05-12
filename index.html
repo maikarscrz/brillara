@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brillara - Solar-Powered Light Bulb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <link rel="icon" type="images" href="favicon.png">
+</head>
+<body class="bg-[#F5F7F8] text-[#45474B]">
+<nav class="bg-white/80 backdrop-blur-md border-b border-gray-200 text-gray-800 shadow-sm sticky top-0 z-50 transition-all duration-300 hover:bg-white/90">
+    <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+            <!-- Logo/Brand -->
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl font-bold bg-gradient-to-r from-[#379777] to-[#2BB8A6] bg-clip-text text-transparent">Brillara</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="relative group px-2 py-1 font-medium text-gray-700 hover:text-[#379777] transition-colors duration-300">
+                    Home
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#379777] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#product" class="relative group px-2 py-1 font-medium text-gray-700 hover:text-[#379777] transition-colors duration-300">
+                    Products
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#379777] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#about" class="relative group px-2 py-1 font-medium text-gray-700 hover:text-[#379777] transition-colors duration-300">
+                    About
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#379777] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="relative group px-2 py-1 font-medium text-gray-700 hover:text-[#379777] transition-colors duration-300">
+                    Contact
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#379777] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#more" class="relative group px-2 py-1 font-medium text-gray-700 hover:text-[#379777] transition-colors duration-300">
+                    More
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#379777] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                
+                <!-- CTA Button -->
+                <a href="#" class="ml-4 px-4 py-2 bg-gradient-to-r from-[#379777] to-[#2BB8A6] text-white font-medium rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Get Started
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="md:hidden hidden mt-4 pb-4 space-y-3">
+            <a href="#home" class="block px-4 py-2 font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Home</a>
+            <a href="#product" class="block px-4 py-2 font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Products</a>
+            <a href="#about" class="block px-4 py-2 font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">About</a>
+            <a href="#contact" class="block px-4 py-2 font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">Contact</a>
+            <a href="#more" class="block px-4 py-2 font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200">More</a>
+            <a href="#" class="block mt-2 px-4 py-2 bg-gradient-to-r from-[#379777] to-[#2BB8A6] text-white font-medium text-center rounded-lg hover:shadow-md transition-all duration-300">Get Started</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Simple mobile menu toggle functionality
+    document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+        const mobileMenu = document.querySelector('.md\\:hidden.hidden');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 bg-gradient-to-r from-[#379777] to-[#F4CE14]">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Brilliance in Every Glow</h1>
+                <p class="text-xl text-white mb-8">Illuminate Life with Brillara.</p>
+                <p class="text-white mb-8">Discover Solight — your smart, solar-powered light bulb designed for everyday use, emergencies, and life off the grid.</p>
+                <div class="flex space-x-4">
+                    <a href="#product" class="bg-white text-[#379777] px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">Learn More</a>
+                    <a href="#shop" class="bg-[#F4CE14] text-[#45474B] px-6 py-3 rounded-lg font-medium hover:bg-yellow-500 transition">Order Now</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="brillara1.png" alt="Solight Solar Bulb" class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Product Section -->
+<section id="product" class="py-20 bg-[#F5F7F8]">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-4">Our Product: Solight</h2>
+        <p class="text-xl text-center mb-16 max-w-3xl mx-auto">The Smart Solar Light Bulb designed to meet your needs wherever you are — whether you're studying, camping, or managing a power outage.</p>
+        
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <!-- Image Carousel -->
+                <div class="relative overflow-hidden rounded-lg shadow-xl">
+                    <!-- Slides Container -->
+                    <div class="flex transition-transform duration-300 ease-in-out" id="product-carousel">
+                        <div class="min-w-full">
+                            <img src="brillara1.png" alt="Solight Product Image 1" class="w-full h-auto">
+                        </div>
+                        <div class="min-w-full">
+                            <img src="brillara2.png" alt="Solight Product Image 2" class="w-full h-auto">
+                        </div>
+                        <div class="min-w-full">
+                            <img src="brillara3.png" alt="Solight Product Image 3" class="w-full h-auto">
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 text-[#379777] p-2 rounded-full hover:bg-white transition" id="prev-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 text-[#379777] p-2 rounded-full hover:bg-white transition" id="next-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                    
+                    <!-- Indicators -->
+                    <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                        <button class="w-3 h-3 rounded-full bg-white/80 hover:bg-white transition indicator-btn" data-index="0"></button>
+                        <button class="w-3 h-3 rounded-full bg-white/80 hover:bg-white transition indicator-btn" data-index="1"></button>
+                        <button class="w-3 h-3 rounded-full bg-white/80 hover:bg-white transition indicator-btn" data-index="2"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <h3 class="text-2xl font-semibold mb-6 text-[#379777]">Key Features:</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-[#F4CE14] mr-3">✓</span>
+                        <span><strong>Dual Charging Capability:</strong> Recharge via solar or Type-B cable</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#F4CE14] mr-3">✓</span>
+                        <span><strong>Adaptive Brightness Control (ABC):</strong> Auto-adjusts brightness based on surrounding light</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#F4CE14] mr-3">✓</span>
+                        <span><strong>Motion Sensor:</strong> Lights up only when needed to conserve energy</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#F4CE14] mr-3">✓</span>
+                        <span><strong>Emergency SOS Mode:</strong> Flashing light for emergency signaling</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#F4CE14] mr-3">✓</span>
+                        <span><strong>Power Reserve Mode:</strong> Activates low-brightness mode during low battery</span>
+                    </li>
+                </ul>
+                
+                <h3 class="text-2xl font-semibold mt-10 mb-4 text-[#379777]">Built for:</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-[#379777] text-white px-4 py-2 rounded-full text-sm">Outdoor enthusiasts</span>
+                    <span class="bg-[#379777] text-white px-4 py-2 rounded-full text-sm">Rural households</span>
+                    <span class="bg-[#379777] text-white px-4 py-2 rounded-full text-sm">Emergency kits</span>
+                    <span class="bg-[#379777] text-white px-4 py-2 rounded-full text-sm">Sustainable homes</span>
+                </div>
+                
+                <a href="#shop" class="mt-8 inline-block bg-[#F4CE14] text-[#45474B] px-8 py-3 rounded-lg font-medium hover:bg-yellow-500 transition">Order Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.getElementById('product-carousel');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const indicatorBtns = document.querySelectorAll('.indicator-btn');
+        
+        let currentIndex = 0;
+        const totalSlides = document.querySelectorAll('#product-carousel > div').length;
+        
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update active indicator
+            indicatorBtns.forEach((btn, index) => {
+                if (index === currentIndex) {
+                    btn.classList.add('bg-white');
+                    btn.classList.remove('bg-white/80');
+                } else {
+                    btn.classList.remove('bg-white');
+                    btn.classList.add('bg-white/80');
+                }
+            });
+        }
+        
+        // Next button click
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        });
+        
+        // Previous button click
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+        
+        // Indicator buttons click
+        indicatorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentIndex = parseInt(btn.getAttribute('data-index'));
+                updateCarousel();
+            });
+        });
+        
+        // Auto-rotate slides every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }, 5000);
+    });
+</script>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Shop Solight</h2>
+            
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <div class="bg-[#F5F7F8] p-8 rounded-lg shadow-lg">
+                    <div class="text-center mb-8">
+                        <span class="text-4xl font-bold text-[#379777]">₱3,000</span>
+                        <p class="text-sm">Price per Unit</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold mb-4 text-[#379777]">What's Included:</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-[#F4CE14] mr-2">✔</span>
+                            <span>1 Solight LED Bulb</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-[#F4CE14] mr-2">✔</span>
+                            <span>User Manual</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-[#F4CE14] mr-2">✔</span>
+                            <span>Charging Cable</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-[#F4CE14] mr-2">✔</span>
+                            <span>6-month Warranty</span>
+                        </li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-semibold mb-4 text-[#379777]">Payment Options:</h3>
+                    <ul class="space-y-2">
+                        <li>• GCash / Bank Transfer</li>
+                        <li>• Cash on Delivery (COD)</li>
+                        <li>• Pay-As-You-Go for rural communities (coming soon)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-[#379777]">Order Form</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block mb-1">Full Name</label>
+                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4CE14]">
+                        </div>
+                        <div>
+                            <label class="block mb-1">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4CE14]">
+                        </div>
+                        <div>
+                            <label class="block mb-1">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4CE14]">
+                        </div>
+                        <div>
+                            <label class="block mb-1">Quantity</label>
+                            <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4CE14]">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5+ (Bulk Order)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-1">Payment Method</label>
+                            <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4CE14]">
+                                <option>GCash</option>
+                                <option>Bank Transfer</option>
+                                <option>Cash on Delivery</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-[#F4CE14] text-[#45474B] py-3 rounded-lg font-medium hover:bg-yellow-500 transition">Buy Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">How It Works</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-[#379777]">Charging:</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3">•</span>
+                            <span>Place under sunlight for 6–8 hours</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3">•</span>
+                            <span>Or charge via Type-B port for 2 hours</span>
+                        </li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold mb-6 text-[#379777]">Using Solight:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3">•</span>
+                            <span>Automatically lights up in darkness</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3">•</span>
+                            <span>Detects motion to activate only when needed</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3">•</span>
+                            <span>Flashes SOS signal in emergencies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3">•</span>
+                            <span>Switches to low-brightness mode to extend battery life</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8 p-6 bg-[#F5F7F8] rounded-lg">
+                        <p class="font-bold text-lg text-[#379777]">Battery Life:</p>
+                        <p>Up to 72 hours of light on a full charge.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://via.placeholder.com/500x400/F5F7F8/379777?text=Solight+Diagram" alt="How Solight Works" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-[#F5F7F8]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-[#379777]">Q: Is Solight waterproof?</h3>
+                    <p>A: Yes! It's weather-resistant and can withstand rain and light storms.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-[#379777]">Q: How long does Solight stay lit?</h3>
+                    <p>A: Up to 72 hours on low brightness mode after a full solar charge.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-[#379777]">Q: Can I use Solight indoors?</h3>
+                    <p>A: Yes, it works well indoors. Just make sure to charge it in the sun or via USB.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Our Impact & Future Plans</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg mb-8 text-center">Since our launch, we've committed to creating smarter, greener lighting.</p>
+                
+                <h3 class="text-2xl font-semibold mb-6 text-[#379777]">In the next 2 years, we aim to:</h3>
+                <ul class="space-y-4 mb-12">
+                    <li class="flex items-start">
+                        <span class="text-[#F4CE14] mr-3">•</span>
+                        <span>Expand to over 50+ communities</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#F4CE14] mr-3">•</span>
+                        <span>Release 2 new lighting innovations</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#F4CE14] mr-3">•</span>
+                        <span>Scale production and reduce costs</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#F4CE14] mr-3">•</span>
+                        <span>Launch education campaigns on solar technology</span>
+                    </li>
+                </ul>
+                
+                <div class="bg-[#F5F7F8] p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-[#379777]">Our Progress So Far</h3>
+                    <div class="grid md:grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-4xl font-bold text-[#F4CE14]">10+</div>
+                            <p>Communities Reached</p>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-[#F4CE14]">500+</div>
+                            <p>Units Sold</p>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-[#F4CE14]">5</div>
+                            <p>Partnerships Formed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Serve Section -->
+    <section id="more" class="py-20 bg-[#379777] text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Who We Serve</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white text-[#45474B] p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#F4CE14] flex items-center justify-center text-2xl">🎓</div>
+                    <h3 class="text-xl font-semibold mb-2">Students</h3>
+                    <p>For late-night study sessions, even during brownouts.</p>
+                </div>
+                <div class="bg-white text-[#45474B] p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#F4CE14] flex items-center justify-center text-2xl">👨‍👩‍👧‍👦</div>
+                    <h3 class="text-xl font-semibold mb-2">Families</h3>
+                    <p>Safe, portable lighting for every corner of your home.</p>
+                </div>
+                <div class="bg-white text-[#45474B] p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#F4CE14] flex items-center justify-center text-2xl">🚨</div>
+                    <h3 class="text-xl font-semibold mb-2">Disaster Relief</h3>
+                    <p>Reliable emergency light source for calamity-prone areas.</p>
+                </div>
+                <div class="bg-white text-[#45474B] p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#F4CE14] flex items-center justify-center text-2xl">🏕️</div>
+                    <h3 class="text-xl font-semibold mb-2">Outdoor Enthusiasts</h3>
+                    <p>Perfect for camping, hiking, and night travel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <section class="py-20 bg-[#F4CE14]">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Partner With Us</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Brillara welcomes partnerships with NGOs, Government Units, and Retailers to help distribute Solight in underserved areas.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-[#379777]">NGOs</h3>
+                    <p>Help distribute Solight in underserved areas.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-[#379777]">Government Units</h3>
+                    <p>Collaborate on sustainable community programs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-[#379777]">Retailers</h3>
+                    <p>Stock Solight in your store.</p>
+                </div>
+            </div>
+            
+            <p class="text-xl mb-8">Let's work together to light up more lives.</p>
+            <a href="#contact" class="inline-block bg-[#379777] text-white px-8 py-3 rounded-lg font-medium hover:bg-green-700 transition">Become a Partner</a>
+        </div>
+    </section>
+
+
+    
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">About Us</h2>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="bg-[#F5F7F8] p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-[#379777]">Mission</h3>
+                    <p>At <span class="font-bold">Brillara</span>, our mission is to provide sustainable, affordable, and energy-efficient lighting solutions that empower communities with limited electricity access.</p>
+                </div>
+                
+                <div class="bg-[#F5F7F8] p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-[#379777]">Vision</h3>
+                    <p>We envision a future where renewable energy brightens the lives of families and adventurers alike — wherever light is needed, Solight will be there.</p>
+                </div>
+                
+                <div class="bg-[#F5F7F8] p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-[#379777]">Our Story</h3>
+                    <p>Brillara is a student-led startup founded by passionate technopreneurs aiming to make a positive impact. With our first product, <span class="font-bold">Solight</span>, we hope to bring light, safety, and sustainability to every home, campsite, and community.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-[#379777]">Meet the Team</h3>
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="bg-[#F5F7F8] p-6 rounded-lg shadow text-center">
+                        <div class="w-24 h-24 mx-auto rounded-full bg-[#379777] mb-4 flex items-center justify-center text-white text-2xl font-bold">LA</div>
+                        <h4 class="font-bold">Louise Bien Abarientos</h4>
+                        <p class="text-sm">Project Manager</p>
+                    </div>
+                    <div class="bg-[#F5F7F8] p-6 rounded-lg shadow text-center">
+                        <div class="w-24 h-24 mx-auto rounded-full bg-[#379777] mb-4 flex items-center justify-center text-white text-2xl font-bold">PA</div>
+                        <h4 class="font-bold">Paulo Almorfe</h4>
+                        <p class="text-sm">Engineering Team Lead</p>
+                    </div>
+                    <div class="bg-[#F5F7F8] p-6 rounded-lg shadow text-center">
+                        <div class="w-24 h-24 mx-auto rounded-full bg-[#379777] mb-4 flex items-center justify-center text-white text-2xl font-bold">MC</div>
+                        <h4 class="font-bold">Maikarose Cruz</h4>
+                        <p class="text-sm">Marketing and Sales Head</p>
+                    </div>
+                    <div class="bg-[#F5F7F8] p-6 rounded-lg shadow text-center">
+                        <div class="w-24 h-24 mx-auto rounded-full bg-[#379777] mb-4 flex items-center justify-center text-white text-2xl font-bold">WE</div>
+                        <h4 class="font-bold">William Gabriel Eclipse</h4>
+                        <p class="text-sm">Logistics & Support Head</p>
+                    </div>
+                    <div class="bg-[#F5F7F8] p-6 rounded-lg shadow text-center">
+                        <div class="w-24 h-24 mx-auto rounded-full bg-[#379777] mb-4 flex items-center justify-center text-white text-2xl font-bold">SS</div>
+                        <h4 class="font-bold">Sarah Maries Sebastian</h4>
+                        <p class="text-sm">Engineering and Operations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#F5F7F8]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Contact Us</h2>
+            
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-[#379777]">Let's talk!</h3>
+                    <p class="mb-8">Got questions? Want to order in bulk or become a reseller? Reach out to us!</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3 mt-1">📞</span>
+                            <span>Phone: 0978-456-1230</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3 mt-1">📧</span>
+                            <span>Email: <a href="mailto:brillarasolight@gmail.com" class="text-[#379777] hover:underline">brillara-solight@gmail.com</a></span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3 mt-1">📍</span>
+                            <span>Metro Manila, Philippines</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3 mt-1">📘</span>
+                            <span>Facebook: <a href="#" class="text-[#379777] hover:underline">facebook.com/brillara-solight</a></span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-[#F4CE14] mr-3 mt-1">🛒</span>
+                            <span>Shopee: <a href="#" class="text-[#379777] hover:underline">shopee.ph/brillara-solight</a></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block mb-1">Name</label>
+                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4CE14]">
+                        </div>
+                        <div>
+                            <label class="block mb-1">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4CE14]">
+                        </div>
+                        <div>
+                            <label class="block mb-1">Subject</label>
+                            <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4CE14]">
+                                <option>General Inquiry</option>
+                                <option>Bulk Order</option>
+                                <option>Partnership</option>
+                                <option>Support</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-1">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4CE14]"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#F4CE14] text-[#45474B] py-3 rounded-lg font-medium hover:bg-yellow-500 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#45474B] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-semibold">Brillara</span>
+                    <p class="mt-2">Illuminate Life with Brillara.</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#home" class="hover:text-[#F4CE14] transition">Home</a>
+                    <a href="#product" class="hover:text-[#F4CE14] transition">Products</a>
+                    <a href="#about" class="hover:text-[#F4CE14] transition">About</a>
+                    <a href="#contact" class="hover:text-[#F4CE14] transition">Contact</a>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-[#379777] flex items-center justify-center hover:bg-[#F4CE14] transition">
+                        <span>📘</span>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-[#379777] flex items-center justify-center hover:bg-[#F4CE14] transition">
+                        <span>📷</span>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-[#379777] flex items-center justify-center hover:bg-[#F4CE14] transition">
+                        <span>🛒</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p>© 2025 Brillara. All rights reserved.</p>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-[#F4CE14] transition">Terms & Conditions</a>
+                        <a href="#" class="hover:text-[#F4CE14] transition">Privacy Policy</a>
+                        <a href="#contact" class="hover:text-[#F4CE14] transition">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
